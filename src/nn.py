@@ -25,7 +25,7 @@ class Neuron(Module):
         if self.dropout > 0 and random.random() < self.dropout:
             return Value(0.0) # "pretend this neuron does not exist in this forward pass"
             
-            return out
+        return out
 
     def parameters(self):
         return self.w + [self.b]
